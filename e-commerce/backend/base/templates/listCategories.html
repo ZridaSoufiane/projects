@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load custom_tag %}
+{% block title %} Nos Produits {% endblock%}
+{%  block content %}
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3>Liste des Catégories</h3>
+            </div>
+            <div class="card-body">
+              <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Identifiant</th>
+      <th scope="col">Nom</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for categorie in categories%}
+    <tr class="table">
+      <td>{{ categorie.id}}</td>
+      <td>{{ categorie.nom}}</td>
+     <td>
+        <a class="btn btn-primary" href="{% url 'categorieShow' categorie.id %}">
+            <i class="fas fa-eye"></i>
+          </a>
+          <a class="btn btn-warning" href="{% url 'categorieUpdate' categorie.id %}">
+            <i class="fas fa-edit"></i>
+          </a>
+          <a class="btn btn-danger" href="{% url 'categorieDelete' categorie.id %}" >
+            <i class="fas fa-trash"></i>
+          </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{%  endblock %}

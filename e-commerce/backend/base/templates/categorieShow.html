@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load custom_tag %}
+{% block title %} Nos Produits {% endblock%}
+{%  block content %}
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3>Liste des Produits</h3>
+            </div>
+            <div class="card-body">
+              <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Identifiant</th>
+      <th scope="col">Nom</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table">
+      <td>{{ Categorie.id}}</td>
+      <td>{{ Categorie.nom}}</td>
+      <td>
+        <a class="btn btn-primary" href="{% url 'Categories' %}">
+            <i class="fas fa-undo"></i>
+          </a>
+          <a class="btn btn-warning" href="{% url 'categorieUpdate' Categorie.id %}">
+            <i class="fas fa-edit"></i>
+            </a>
+          <a class="btn btn-danger">
+            <i class="fas fa-trash"></i>
+          </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{%  endblock %}

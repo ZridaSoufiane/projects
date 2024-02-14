@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} Accueil {% endblock%}
+{% block content %}
+    <div class="container-fluid">
+            <div class="jumbotron m-3">
+                    <h1 class="display-3">Bienvenue sur E-Commerce</h1>
+                    <p class="lead">Nous mettons à votre position un ensemble de produits</p>
+                    <hr class="my-4">
+                    <p>Veuillez consulter la liste de nos produits que nous recommandons à vous !</p>
+                    <p class="lead">
+                     <a class="btn btn-danger btn-lg" href="{% url 'Products' %}" role="button">Voir les Produits</a>
+                     <a class="btn btn-success btn-lg m-lg-3" href="{% url 'Categories' %}" role="button">Voir les Catégories</a>   
+                </p>
+            </div>
+    </div>
+{% endblock %}

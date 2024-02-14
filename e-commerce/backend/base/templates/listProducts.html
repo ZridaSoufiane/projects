@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load custom_tag %}
+{% block title %} Nos Produits {% endblock%}
+{%  block content %}
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3>Liste des Produits</h3>
+            </div>
+            <div class="card-body">
+              <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Identifiant</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Categorie</th>
+      <th scope="col">Prix</th>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for Product in products%}
+    <tr class="table">
+      <th scope="row">{{ Product.user}}</th>
+      <td>{{ Product.name}}</td>
+      <td>{{ Product.category}}</td>
+      <td>{{ Product.price}}</td>
+      <td>
+        <img src="{{ Product.image.url }}" alt="ekram" width="50px" height="50px">
+      </td>
+      <td>
+        <a class="btn btn-primary" href="{% url 'productShow' Product.id %}">
+          <i class="fas fa-eye"></i>
+        </a>
+        <a class="btn btn-warning" href="{% url 'productUpdate' Product.id %}">
+          <i class="fas fa-edit"></i>
+        </a>
+        <a class="btn btn-danger" href="{% url 'productDelete' Product.id %}" >
+          <i class="fas fa-trash"></i>
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{%  endblock %}

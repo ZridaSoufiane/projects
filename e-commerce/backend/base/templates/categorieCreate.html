@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} Nos Produits {% endblock%}
+{% load crispy_forms_tags %}
+{%  block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col 12">
+                <div class="card-header">
+                    <h3>Nouveau Catégorie</h3>
+                </div>
+                <div class="card-body">
+                    <div class="mt-3">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{formCategorie|crispy}}
+                        <div class="mt-3"></div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <button type="submit" class="btn btn-success btn-block">
+                                    <i class="fas fa-database"></i>
+                                    Enregistrer</button>
+                            </div>
+                            <div class="col-md-4">
+                                <a class="btn btn-secondary btn-block" href="{% url 'Categories' %}">
+                                    <i class="fas fa-undo"></i>
+                                    Revenir</a>
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%  endblock %}

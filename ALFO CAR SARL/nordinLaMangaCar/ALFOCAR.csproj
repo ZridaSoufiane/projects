@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6189F135-F16B-4E27-BCBE-D6406187F9DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nordinLaMangaCar</RootNamespace>
+    <AssemblyName>nordinLaMangaCar</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\aymane\Desktop\MySetupFile\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\LaMangaCar\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\..\Downloads\_Getintopc.com_Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Winforms.2010SP1Update.10.0.40219.329\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accueil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Accueil.Designer.cs">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentification.Designer.cs">
+      <DependentUpon>Authentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="compte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compte.Designer.cs">
+      <DependentUpon>compte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContratSG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContratSG.Designer.cs">
+      <DependentUpon>ContratSG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSContrat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSContrat.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facture.Designer.cs">
+      <DependentUpon>Facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListContrat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListContrat.Designer.cs">
+      <DependentUpon>ListContrat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListClient.Designer.cs">
+      <DependentUpon>ListClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierClt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierClt.Designer.cs">
+      <DependentUpon>ModifierClt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVClient.Designer.cs">
+      <DependentUpon>NVClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVContratSigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NVContratSigner.Designer.cs">
+      <DependentUpon>NVContratSigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVVoiture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NVVoiture.Designer.cs">
+      <DependentUpon>NVVoiture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ListVoiture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListVoiture.Designer.cs">
+      <DependentUpon>ListVoiture.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accueil.resx">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentification.resx">
+      <DependentUpon>Authentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compte.resx">
+      <DependentUpon>compte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContratSG.resx">
+      <DependentUpon>ContratSG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facture.resx">
+      <DependentUpon>Facture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListContrat.resx">
+      <DependentUpon>ListContrat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListClient.resx">
+      <DependentUpon>ListClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierClt.resx">
+      <DependentUpon>ModifierClt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVClient.resx">
+      <DependentUpon>NVClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVContratSigner.resx">
+      <DependentUpon>NVContratSigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVVoiture.resx">
+      <DependentUpon>NVVoiture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ListVoiture.resx">
+      <DependentUpon>ListVoiture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RVFacture.rdlc" />
+    <EmbeddedResource Include="RVContrat.rdlc" />
+    <None Include="DSContrat.xsc">
+      <DependentUpon>DSContrat.xsd</DependentUpon>
+    </None>
+    <None Include="DSContrat.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSContrat.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSContrat.xss">
+      <DependentUpon>DSContrat.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Citroein.png" />
+    <Content Include="Resources\Icones\1486348528-forward-arrows-arrow-front-go_80452.png" />
+    <Content Include="Resources\Icones\1486348529-back-backwards-repeat-arrows-arrow_80455.png" />
+    <Content Include="Resources\Icones\accept_icon-icons.com_74428.png" />
+    <Content Include="Resources\Icones\edit.png" />
+    <Content Include="Resources\Icones\SETR241G5.png" />
+    <None Include="Resources\logo1.png" />
+    <None Include="Resources\logo2.png" />
+    <Content Include="Resources\Voitures\Clio4.png" />
+    <Content Include="Resources\Voitures\Clio5.png" />
+    <Content Include="Resources\Voitures\DaciaL.png" />
+    <Content Include="Resources\Voitures\Nissan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
